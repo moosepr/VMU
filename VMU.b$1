@@ -166,16 +166,6 @@
 </layers>
 <board>
 <plain>
-<wire x1="6.35" y1="1.27" x2="28.829" y2="1.27" width="0" layer="20"/>
-<wire x1="32.766" y1="4.826" x2="32.766" y2="62.23" width="0" layer="20"/>
-<wire x1="29.337" y1="66.167" x2="6.096" y2="66.167" width="0" layer="20"/>
-<wire x1="2.667" y1="62.738" x2="2.667" y2="4.953" width="0" layer="20"/>
-<wire x1="6.35" y1="1.27" x2="2.667" y2="4.953" width="0" layer="20" curve="-94.090817"/>
-<wire x1="32.766" y1="4.826" x2="28.829" y2="1.27" width="0" layer="20" curve="-98.294821"/>
-<wire x1="29.337" y1="66.167" x2="32.766" y2="62.23" width="0" layer="20" curve="-96.211568"/>
-<wire x1="2.667" y1="62.738" x2="6.096" y2="66.167" width="0" layer="20" curve="-90"/>
-<text x="15.24" y="12.827" size="6.4516" layer="26" rot="MR90">#P0CKET</text>
-<text x="15.367" y="23.368" size="2.54" layer="26" rot="MR90">i</text>
 </plain>
 <libraries>
 <library name="SparkFun-Electromechanical">
@@ -206,6 +196,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="2.5" y="-3.23" size="0.4064" layer="27">&gt;VALUE</text>
 <hole x="-1.5" y="0" drill="0.9"/>
 <hole x="1.5" y="0" drill="0.9"/>
+</package>
+<package name="BUZZER-CMT1603">
+<wire x1="-8" y1="8" x2="-8" y2="-8" width="0.127" layer="21"/>
+<wire x1="-8" y1="-8" x2="8" y2="-8" width="0.127" layer="21"/>
+<wire x1="8" y1="-8" x2="8" y2="8" width="0.127" layer="21"/>
+<wire x1="8" y1="8" x2="-8" y2="8" width="0.127" layer="21"/>
+<smd name="P$1" x="-9.3" y="0" dx="2.5" dy="3" layer="1"/>
+<smd name="P$2" x="9.3" y="0" dx="2.5" dy="3" layer="1"/>
 </package>
 </packages>
 </library>
@@ -371,21 +369,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="1.4986" y1="0.8128" x2="1.4986" y2="-0.8128" width="0.0508" layer="39"/>
 <wire x1="1.4986" y1="-0.8128" x2="-1.4986" y2="-0.8128" width="0.0508" layer="39"/>
 <wire x1="-1.4986" y1="-0.8128" x2="-1.4986" y2="0.8128" width="0.0508" layer="39"/>
-</package>
-</packages>
-</library>
-<library name="BUZZ55">
-<packages>
-<package name="BUZZ5.5">
-<wire x1="2.6" y1="2.6" x2="2.6" y2="-2.6" width="0.127" layer="21"/>
-<wire x1="2.6" y1="-2.6" x2="-2.6" y2="-2.6" width="0.127" layer="21"/>
-<wire x1="-2.6" y1="-2.6" x2="-2.6" y2="1.9" width="0.127" layer="21"/>
-<wire x1="-2.6" y1="1.9" x2="-1.9" y2="2.6" width="0.127" layer="21"/>
-<wire x1="-1.9" y1="2.6" x2="2.6" y2="2.6" width="0.127" layer="21"/>
-<circle x="-1" y="0" radius="0.4" width="0.127" layer="21"/>
-<smd name="SP-" x="1.75" y="1.9" dx="0.8" dy="2" layer="1"/>
-<smd name="SP+" x="1.75" y="-1.9" dx="0.8" dy="2" layer="1"/>
-<smd name="DUM" x="-1.75" y="-1.9" dx="0.8" dy="2" layer="1"/>
 </package>
 </packages>
 </library>
@@ -612,76 +595,71 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="PI1" library="RPI-Zero" package="RASPBERRYPI_BASTELSTUBE_V13_RASPI_BOARD_B+_FULL" value="RPI-ZERO" x="32.7406" y="66.294" rot="MR270"/>
-<element name="S1" library="SparkFun-Electromechanical" package="KPS-1290" value="SWITCH_SPDT" x="17.8054" y="64.4906" rot="R180">
-<attribute name="PROD_ID" value="SWCH-10651" x="17.8054" y="64.4906" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="PI1" library="RPI-Zero" package="RASPBERRYPI_BASTELSTUBE_V13_RASPI_BOARD_B+_FULL" value="RPI-ZERO" x="36.8046" y="66.04" rot="MR270"/>
+<element name="S1" library="SparkFun-Electromechanical" package="KPS-1290" value="SWITCH_SPDT" x="21.2344" y="64.7446" rot="R180">
+<attribute name="PROD_ID" value="SWCH-10651" x="21.2344" y="64.7446" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="BAT+" library="wirepad" package="SMD2,54-5,08" value="" x="24.5618" y="63.5" smashed="yes">
-<attribute name="NAME" x="22.9" y="59.3612" size="1.27" layer="25"/>
-<attribute name="VALUE" x="24.5618" y="63.5" size="0.0254" layer="27"/>
+<element name="BAT+" library="wirepad" package="SMD2,54-5,08" value="" x="28.6258" y="63.627" smashed="yes">
+<attribute name="NAME" x="26.964" y="59.4882" size="1.27" layer="25"/>
+<attribute name="VALUE" x="28.6258" y="63.627" size="0.0254" layer="27"/>
 </element>
-<element name="BAT-" library="wirepad" package="SMD2,54-5,08" value="" x="10.8966" y="63.4238" smashed="yes">
-<attribute name="NAME" x="9.2348" y="59.3104" size="1.27" layer="25"/>
-<attribute name="VALUE" x="10.8966" y="63.4238" size="0.0254" layer="27"/>
+<element name="BAT-" library="wirepad" package="SMD2,54-5,08" value="" x="14.5796" y="63.9318" smashed="yes">
+<attribute name="NAME" x="12.9178" y="59.8184" size="1.27" layer="25"/>
+<attribute name="VALUE" x="14.5796" y="63.9318" size="0.0254" layer="27"/>
 </element>
-<element name="U$1" library="ST7735S" package="ST7735S-1.44" value="ST7735S-1.44" x="17.7546" y="41.3766" rot="R90"/>
-<element name="R1" library="SparkFun-Resistors" package="0805" value="" x="5.715" y="21.1074"/>
-<element name="U$3" library="BUZZ55" package="BUZZ5.5" value="BUZZ5.5" x="22.606" y="19.304" rot="R180"/>
-<element name="U$4" library="BUZZ55" package="BUZZ5.5" value="BUZZ5.5" x="16.637" y="19.304" rot="R90"/>
-<element name="UP" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="38.735" y="37.973"/>
-<element name="LEFT" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="-2.032" y="3.937"/>
-<element name="X" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="-8.89" y="3.937"/>
-<element name="DOWN" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="-15.748" y="3.937"/>
-<element name="RIGHT" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="-22.606" y="3.937"/>
-<element name="Z" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="-29.464" y="3.937"/>
-<element name="SLEEP" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="-36.322" y="3.937"/>
-<element name="MODE" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="-43.18" y="3.937"/>
+<element name="U$1" library="ST7735S" package="ST7735S-1.44" value="ST7735S-1.44" x="21.7424" y="40.5384" rot="R270"/>
+<element name="R1" library="SparkFun-Resistors" package="0805" value="" x="22.225" y="45.6184"/>
+<element name="UP" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="14.351" y="17.145"/>
+<element name="LEFT" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="8.001" y="12.192"/>
+<element name="X" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="29.718" y="6.985"/>
+<element name="DOWN" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="14.351" y="7.747"/>
+<element name="RIGHT" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="19.685" y="12.446"/>
+<element name="Z" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="36.322" y="11.811"/>
+<element name="SLEEP" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="24.765" y="18.288"/>
+<element name="MODE" library="Game_Boy" package="DS-LITE-BTN" value="DMG-BTNDS-BUTTON" x="31.369" y="18.669"/>
+<element name="SG2" library="SparkFun-Electromechanical" package="BUZZER-CMT1603" value="BUZZERSMD" x="13.589" y="35.941" rot="R270"/>
+<element name="SG1" library="SparkFun-Electromechanical" package="BUZZER-CMT1603" value="BUZZERSMD" x="29.845" y="35.941" rot="R90"/>
 </elements>
 <signals>
 <signal name="N$1">
 <contactref element="PI1" pad="22"/>
 <contactref element="U$1" pad="P$9"/>
-<wire x1="4.9276" y1="32.512" x2="13.2046" y2="32.3766" width="0" layer="19" extent="1-16"/>
+<wire x1="8.9916" y1="32.258" x2="26.2924" y2="49.5384" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$2">
 <contactref element="PI1" pad="23"/>
 <contactref element="U$1" pad="P$6"/>
-<wire x1="7.4676" y1="29.972" x2="17.1046" y2="32.3766" width="0" layer="19" extent="1-16"/>
+<wire x1="11.5316" y1="29.718" x2="22.3924" y2="49.5384" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$3">
 <contactref element="PI1" pad="19"/>
 <contactref element="U$1" pad="P$3"/>
-<wire x1="7.4676" y1="35.052" x2="21.0046" y2="32.3766" width="0" layer="19" extent="1-16"/>
+<wire x1="11.5316" y1="34.798" x2="18.4924" y2="49.5384" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$6">
 <contactref element="PI1" pad="18"/>
 <contactref element="U$1" pad="P$4"/>
-<wire x1="4.9276" y1="37.592" x2="19.7046" y2="32.3766" width="0" layer="19" extent="1-16"/>
+<wire x1="8.9916" y1="37.338" x2="19.7924" y2="49.5384" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$7">
 <contactref element="PI1" pad="24"/>
 <contactref element="U$1" pad="P$5"/>
-<wire x1="4.9276" y1="29.972" x2="18.4046" y2="32.3766" width="0" layer="19" extent="1-16"/>
+<wire x1="8.9916" y1="29.718" x2="21.0924" y2="49.5384" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="5V0@2">
 <contactref element="PI1" pad="2"/>
 <contactref element="PI1" pad="4"/>
 <contactref element="S1" pad="S"/>
-<wire x1="4.9276" y1="57.912" x2="15.5554" y2="62.2406" width="0" layer="19" extent="1-16"/>
-<wire x1="4.9276" y1="55.372" x2="4.9276" y2="57.912" width="0" layer="19" extent="16-16"/>
-</signal>
-<signal name="N$22">
-<wire x1="32.9184" y1="66.294" x2="32.7406" y2="66.294" width="0.254" layer="1"/>
+<wire x1="8.9916" y1="57.658" x2="18.9844" y2="62.4946" width="0" layer="19" extent="1-16"/>
+<wire x1="8.9916" y1="55.118" x2="8.9916" y2="57.658" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$14">
 <contactref element="U$1" pad="P$11"/>
 <contactref element="R1" pad="2"/>
-<wire x1="6.615" y1="21.1074" x2="10.6046" y2="32.3766" width="0" layer="19" extent="1-1"/>
+<wire x1="23.125" y1="45.6184" x2="28.8924" y2="49.5384" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GND@3">
 <contactref element="PI1" pad="39"/>
-<contactref element="U$3" pad="SP-"/>
-<contactref element="U$4" pad="SP-"/>
 <contactref element="Z" pad="P$3"/>
 <contactref element="X" pad="P$3"/>
 <contactref element="SLEEP" pad="P$3"/>
@@ -689,117 +667,100 @@ design rules under a new name.</description>
 <contactref element="UP" pad="P$3"/>
 <contactref element="RIGHT" pad="P$3"/>
 <contactref element="DOWN" pad="P$3"/>
-<wire x1="20.856" y1="17.404" x2="41.0482" y2="37.9283625" width="0" layer="19" extent="1-1"/>
-<wire x1="14.737" y1="21.054" x2="20.856" y2="17.404" width="0" layer="19" extent="1-1"/>
-<wire x1="7.4676" y1="9.652" x2="14.737" y2="21.054" width="0" layer="19" extent="1-16"/>
-<wire x1="0.2812" y1="3.8923625" x2="7.4676" y2="9.652" width="0" layer="19" extent="1-16"/>
-<wire x1="-6.5768" y1="3.8923625" x2="0.2812" y2="3.8923625" width="0" layer="19" extent="1-1"/>
-<wire x1="-13.4348" y1="3.8923625" x2="-6.5768" y2="3.8923625" width="0" layer="19" extent="1-1"/>
-<wire x1="-20.2928" y1="3.8923625" x2="-13.4348" y2="3.8923625" width="0" layer="19" extent="1-1"/>
-<wire x1="-27.1508" y1="3.8923625" x2="-20.2928" y2="3.8923625" width="0" layer="19" extent="1-1"/>
-<wire x1="-34.0088" y1="3.8923625" x2="-27.1508" y2="3.8923625" width="0" layer="19" extent="1-1"/>
+<contactref element="MODE" pad="P$3"/>
+<contactref element="SG2" pad="P$1"/>
+<contactref element="SG1" pad="P$2"/>
+<wire x1="11.5316" y1="9.398" x2="16.6642" y2="17.1003625" width="0" layer="19" extent="1-16"/>
+<wire x1="10.3142" y1="12.1473625" x2="11.5316" y2="9.398" width="0" layer="19" extent="1-16"/>
+<wire x1="32.0312" y1="6.9403625" x2="10.3142" y2="12.1473625" width="0" layer="19" extent="1-1"/>
+<wire x1="16.6642" y1="7.7023625" x2="32.0312" y2="6.9403625" width="0" layer="19" extent="1-1"/>
+<wire x1="21.9982" y1="12.4013625" x2="16.6642" y2="7.7023625" width="0" layer="19" extent="1-1"/>
+<wire x1="38.6352" y1="11.7663625" x2="21.9982" y2="12.4013625" width="0" layer="19" extent="1-1"/>
+<wire x1="27.0782" y1="18.2433625" x2="38.6352" y2="11.7663625" width="0" layer="19" extent="1-1"/>
+<wire x1="33.6822" y1="18.6243625" x2="27.0782" y2="18.2433625" width="0" layer="19" extent="1-1"/>
+<wire x1="13.589" y1="45.241" x2="33.6822" y2="18.6243625" width="0" layer="19" extent="1-1"/>
+<wire x1="29.845" y1="45.241" x2="13.589" y2="45.241" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
 <contactref element="PI1" pad="37"/>
 <contactref element="SLEEP" pad="P$4"/>
-<wire x1="7.4676" y1="12.192" x2="-38.619796875" y2="3.965478125" width="0" layer="19" extent="1-16"/>
+<wire x1="11.5316" y1="11.938" x2="22.467203125" y2="18.316478125" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$5">
 <contactref element="PI1" pad="35"/>
 <contactref element="RIGHT" pad="P$4"/>
-<wire x1="7.4676" y1="14.732" x2="-24.903796875" y2="3.965478125" width="0" layer="19" extent="1-16"/>
+<wire x1="11.5316" y1="14.478" x2="17.387203125" y2="12.474478125" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$8">
 <contactref element="PI1" pad="31"/>
 <contactref element="LEFT" pad="P$4"/>
-<wire x1="-4.329796875" y1="3.965478125" x2="7.4676" y2="19.812" width="0" layer="19" extent="1-16"/>
+<wire x1="5.703203125" y1="12.220478125" x2="11.5316" y2="19.558" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$9">
 <contactref element="PI1" pad="29"/>
 <contactref element="UP" pad="P$4"/>
-<wire x1="7.4676" y1="22.352" x2="36.437203125" y2="38.001478125" width="0" layer="19" extent="1-16"/>
+<wire x1="11.5316" y1="22.098" x2="12.053203125" y2="17.173478125" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$10">
 <contactref element="PI1" pad="27"/>
 <contactref element="DOWN" pad="P$4"/>
-<wire x1="-18.045796875" y1="3.965478125" x2="7.4676" y2="24.892" width="0" layer="19" extent="1-16"/>
+<wire x1="12.053203125" y1="7.775478125" x2="11.5316" y2="24.638" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$12">
 <contactref element="PI1" pad="13"/>
 <contactref element="Z" pad="P$4"/>
-<wire x1="-31.761796875" y1="3.965478125" x2="7.4676" y2="42.672" width="0" layer="19" extent="1-16"/>
+<wire x1="34.024203125" y1="11.839478125" x2="11.5316" y2="42.418" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$13">
 <contactref element="PI1" pad="12"/>
-<contactref element="U$4" pad="SP+"/>
-<wire x1="18.537" y1="21.054" x2="4.9276" y2="45.212" width="0" layer="19" extent="1-16"/>
-</signal>
-<signal name="N$15">
-<contactref element="PI1" pad="33"/>
-<contactref element="U$3" pad="SP+"/>
-<wire x1="7.4676" y1="17.272" x2="20.856" y2="21.204" width="0" layer="19" extent="1-16"/>
+<contactref element="SG1" pad="P$1"/>
+<wire x1="8.9916" y1="44.958" x2="29.845" y2="26.641" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$21">
 <contactref element="S1" pad="P"/>
 <contactref element="BAT+" pad="1"/>
-<wire x1="17.0554" y1="62.2406" x2="24.5618" y2="63.5" width="0" layer="19" extent="1-1"/>
+<wire x1="20.4844" y1="62.4946" x2="28.6258" y2="63.627" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="3V3@1">
 <contactref element="PI1" pad="1"/>
 <contactref element="U$1" pad="P$1"/>
 <contactref element="U$1" pad="P$2"/>
-<wire x1="22.3046" y1="32.3766" x2="7.4676" y2="57.912" width="0" layer="19" extent="1-16"/>
-<wire x1="23.6046" y1="32.3766" x2="22.3046" y2="32.3766" width="0" layer="19" extent="1-1"/>
+<wire x1="17.1924" y1="49.5384" x2="11.5316" y2="57.658" width="0" layer="19" extent="1-16"/>
+<wire x1="15.8924" y1="49.5384" x2="17.1924" y2="49.5384" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="3V3@2">
 <contactref element="R1" pad="1"/>
 <contactref element="PI1" pad="17"/>
-<wire x1="4.815" y1="21.1074" x2="7.4676" y2="37.592" width="0" layer="19" extent="1-16"/>
+<wire x1="21.325" y1="45.6184" x2="11.5316" y2="37.338" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="GND@2">
 <contactref element="PI1" pad="25"/>
 <contactref element="U$1" pad="P$12"/>
 <contactref element="U$1" pad="P$7"/>
 <contactref element="U$1" pad="P$10"/>
-<wire x1="11.9046" y1="32.3766" x2="15.8046" y2="32.3766" width="0" layer="19" extent="1-1"/>
-<wire x1="9.3046" y1="32.3766" x2="11.9046" y2="32.3766" width="0" layer="19" extent="1-1"/>
-<wire x1="7.4676" y1="27.432" x2="9.3046" y2="32.3766" width="0" layer="19" extent="1-16"/>
-</signal>
-<signal name="N$25">
-<polygon width="0.254" layer="1">
-<vertex x="32.766" y="51.562" curve="90"/>
-<vertex x="24.13" y="42.926"/>
-<vertex x="24.13" y="41.021" curve="90"/>
-<vertex x="31.877" y="32.131"/>
-<vertex x="32.766" y="31.877"/>
-<vertex x="32.766" y="1.27"/>
-<vertex x="2.667" y="1.27"/>
-<vertex x="2.667" y="66.167"/>
-<vertex x="32.766" y="66.167"/>
-</polygon>
-</signal>
-<signal name="N$19">
-<polygon width="0.254" layer="16">
-<vertex x="32.766" y="51.562" curve="90"/>
-<vertex x="24.13" y="42.926"/>
-<vertex x="24.13" y="40.513" curve="90"/>
-<vertex x="32.766" y="31.877"/>
-<vertex x="32.766" y="1.27"/>
-<vertex x="2.667" y="1.27"/>
-<vertex x="2.667" y="66.167"/>
-<vertex x="32.639" y="66.167" curve="-90"/>
-<vertex x="32.766" y="66.04"/>
-</polygon>
+<wire x1="27.5924" y1="49.5384" x2="23.6924" y2="49.5384" width="0" layer="19" extent="1-1"/>
+<wire x1="30.1924" y1="49.5384" x2="27.5924" y2="49.5384" width="0" layer="19" extent="1-1"/>
+<wire x1="11.5316" y1="27.178" x2="30.1924" y2="49.5384" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$16">
 <contactref element="PI1" pad="15"/>
 <contactref element="X" pad="P$4"/>
-<wire x1="-11.187796875" y1="3.965478125" x2="7.4676" y2="40.132" width="0" layer="19" extent="1-16"/>
+<wire x1="27.420203125" y1="7.013478125" x2="11.5316" y2="39.878" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="GND@8">
 <contactref element="PI1" pad="6"/>
 <contactref element="BAT-" pad="1"/>
-<wire x1="4.9276" y1="52.832" x2="10.8966" y2="63.4238" width="0" layer="19" extent="1-16"/>
+<wire x1="8.9916" y1="52.578" x2="14.5796" y2="63.9318" width="0" layer="19" extent="1-16"/>
+</signal>
+<signal name="N$11">
+<contactref element="PI1" pad="21"/>
+<contactref element="MODE" pad="P$4"/>
+<wire x1="11.5316" y1="32.258" x2="29.071203125" y2="18.697478125" width="0" layer="19" extent="1-16"/>
+</signal>
+<signal name="N$15">
+<contactref element="PI1" pad="33"/>
+<contactref element="SG2" pad="P$2"/>
+<wire x1="11.5316" y1="17.018" x2="13.589" y2="26.641" width="0" layer="19" extent="1-16"/>
 </signal>
 </signals>
 </board>
